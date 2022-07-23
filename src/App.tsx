@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ToolTip from 'components/tooltip'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-container'>
+      <div className='content-container'>
+        <div className='tooltip-example-container'>ToolTip on Top</div>
+        <ToolTip tooltipContent="I am tooltip on Top">
+          Hover Me !!!
+        </ToolTip>
+      </div>
+      <div className='content-container'>
+        <div className='tooltip-example-container'>ToolTip on Bottom</div>
+        <ToolTip tooltipContent="I am tooltip on Bottom" direction="bottom">
+          Hover Me!!!
+        </ToolTip>
+      </div>
+      <div className='content-container'>
+        <div className='tooltip-example-container'>ToolTip on Left</div>
+        <ToolTip tooltipContent="I am tooltip on Left" direction="left">
+          Hover Me!!!
+        </ToolTip>
+      </div>
+      <div className='content-container'>
+        <div className='tooltip-example-container'>ToolTip on Right</div>
+        <ToolTip tooltipContent="I am tooltip on Right" direction="right">
+          Hover Me!!!
+        </ToolTip>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
